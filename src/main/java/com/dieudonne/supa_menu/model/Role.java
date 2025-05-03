@@ -1,4 +1,5 @@
 package com.dieudonne.supa_menu.model;
 
-public class Role {
+public enum Role {
+    ADMIN, CUSTOMER
 }
