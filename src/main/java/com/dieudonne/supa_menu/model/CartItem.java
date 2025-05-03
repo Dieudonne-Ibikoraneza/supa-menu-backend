@@ -20,8 +20,9 @@ public class CartItem {
     private long id;
     private int quantity;
 
-    @OneToMany(mappedBy = "menu_item_id")
-    private List<MenuItem> menuItems;
+    @ManyToOne
+    @JoinColumn(name = "menu_item_id")
+    private MenuItem menuItem;
 
     @ManyToOne
     @JoinColumn(name = "cart_id")
