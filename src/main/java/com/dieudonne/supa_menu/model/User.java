@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -28,8 +29,15 @@ public class User {
     @Enumerated(EnumType.STRING)
     private Role role;
 
+    @CreationTimestamp
     private LocalDateTime createdAt;
 
     @OneToMany(mappedBy = "user")
     private List<Order> orders;
+
+    @OneToMany(mappedBy = "user")
+    private List<Cart> carts;
+
+    @OneToMany(mappedBy = "user")
+    private List<Feedback> feedbacks;
 }
