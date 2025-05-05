@@ -18,4 +18,6 @@ public interface RestaurantRepository extends JpaRepository<Restaurant, Long> {
             "cos(radians(r.longitude) - radians(:longitude)) + " +
             "sin(radians(:latitude)) * sin(radians(r.latitude))) < :radius")
     List<Restaurant> findByLocationNear(double latitude, double longitude, double radius);
+
+    boolean existsByEmail(String email);
 }

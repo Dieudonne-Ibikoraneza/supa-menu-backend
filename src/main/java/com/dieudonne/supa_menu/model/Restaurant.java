@@ -24,8 +24,8 @@ public class Restaurant {
     private String address;
     private String phone;
     private String email;
-    private double latitude;
-    private double longitude;
+    private Double latitude;
+    private Double longitude;
     private String cuisineType;
     private String qrcode;
     private String representativeName;
