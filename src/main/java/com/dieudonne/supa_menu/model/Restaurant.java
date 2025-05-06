@@ -27,7 +27,7 @@ public class Restaurant {
     private Double latitude;
     private Double longitude;
     private String cuisineType;
-    private String qrcode;
+    private String qrCode;
     private String representativeName;
     private String bankAccount;
     private String logoUrl;

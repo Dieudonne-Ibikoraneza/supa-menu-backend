@@ -4,6 +4,7 @@ import com.dieudonne.supa_menu.config.JwtUtil;
 import com.dieudonne.supa_menu.model.Role;
 import com.dieudonne.supa_menu.model.User;
 import com.dieudonne.supa_menu.repository.UserRepository;
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -45,6 +46,11 @@ public class AuthService {
             throw new IllegalArgumentException("Invalid email or password");
 
         return jwtUtil.generateToken(user.getEmail(), user.getRole().name());
+    }
+
+    public User getUserByEmail(String email){
+        return userRepository.findByEmail(email)
+                .orElseThrow(() -> new EntityNotFoundException("User not found"));
     }
 
     //TODO: Implement forgotPassword and resetPassword methods

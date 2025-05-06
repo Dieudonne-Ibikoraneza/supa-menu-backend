@@ -50,7 +50,7 @@ public class RestaurantService {
         if (updatedRestaurant.getLatitude() != null) restaurant.setLatitude(updatedRestaurant.getLatitude());
         if (updatedRestaurant.getLongitude() != null) restaurant.setLongitude(updatedRestaurant.getLongitude());
         if (updatedRestaurant.getCuisineType() != null) restaurant.setCuisineType(updatedRestaurant.getCuisineType());
-        if (updatedRestaurant.getQrcode() != null) restaurant.setQrcode(updatedRestaurant.getQrcode());
+        if (updatedRestaurant.getQrCode() != null) restaurant.setQrCode(updatedRestaurant.getQrCode());
         if (updatedRestaurant.getRepresentativeName() != null) restaurant.setRepresentativeName(updatedRestaurant.getRepresentativeName());
         if (updatedRestaurant.getBankAccount() != null) restaurant.setBankAccount(updatedRestaurant.getBankAccount());
         if (updatedRestaurant.getLogoUrl() != null) restaurant.setLogoUrl(updatedRestaurant.getLogoUrl());
